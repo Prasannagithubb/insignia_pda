@@ -26,7 +26,6 @@ class _MyWidgetState extends State<StockAudit> {
             top: Screens.bodyheight(context) * 0.02,
           ),
           child: Column(
-          
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,

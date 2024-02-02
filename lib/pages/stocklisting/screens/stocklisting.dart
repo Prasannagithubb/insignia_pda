@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:insignia_pda/Constant/Screen.dart';
+import 'package:insignia_pda/Controller/stockcontroller/stockcontroller.dart';
+import 'package:provider/provider.dart';
 
-class StockList extends StatelessWidget {
+class StockList extends StatefulWidget {
   const StockList({super.key});
+
+  @override
+  State<StockList> createState() => _StockListState();
+}
+
+class _StockListState extends State<StockList> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      context.read<StockController>().inti();
+      // });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
